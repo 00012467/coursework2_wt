@@ -1,0 +1,9 @@
+extends layout.pug 
+
+block content 
+    h3.page-title Student details: #{ student != undefined ? student.fullName : 'No data...' }
+
+    if student 
+        h1= student.fullName 
+        h2= student.unId 
+        p= student.bio

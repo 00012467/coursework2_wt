@@ -1,0 +1,21 @@
+extends layout.pug 
+
+block content 
+    h3.page-title 
+
+    if student 
+        form(action=`/update/${ student.id }` method="POST")
+            input.input(type="text" name="fullName" value= student.fullName)
+            input.input(type="text" name="unId" value= student.unId)
+            textarea.input(name="bio", cols="30", rows="10")= student.bio
+            button.input.btn Update record
+        
+
+    else 
+        form(action="/create-record" method="POST")
+            input.input(type="text" name="fullName" placeholder="Fullname")
+            input.input(type="text" name="unId" placeholder="University ID")
+            textarea.input(name="bio", cols="30", rows="10" placeholder="Bio")
+            button.input.btn Create record
+
+    

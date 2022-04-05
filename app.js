@@ -3,6 +3,8 @@ const app = express()
 const tasks = require('./routes/tasks')
 const connectDb = require('./db/connect')
 require('dotenv').config()
+
+app.set('view engine', 'pug')
 // middleware
 app.use(express.static('./public'))
 app.use(express.json())
