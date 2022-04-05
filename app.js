@@ -1,14 +1,10 @@
-
-
 const express = require('express')
-// const exphbs = require('express-handlebars');
-// const mysql = require('mysql');
 const app = express()
 const tasks = require('./routes/tasks')
 const connectDb = require('./db/connect')
 require('dotenv').config()
 // middleware
-
+app.use(express.static('./public'))
 app.use(express.json())
 
 // routes
@@ -22,7 +18,7 @@ const start = async() => {
          await connectDb(process.env.MONG_URL )
          app.listen(port, () => console.log(`Listening on port ${port}`))
      } catch (error) {
-         
+         console.log(error)
      }
 }
 
