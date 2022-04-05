@@ -6,4 +6,4 @@
 ## dependecies' list:
 ## "dotenv": "^16.0.0", "env": "^0.0.2", "express": "^4.17.3","mongoose": "^6.2.10"
 ### repository link: https://github.com/00012467/coursework2_wt
-### link to the application that was deployed on heroku:
+### link to the application that was deployed: 
